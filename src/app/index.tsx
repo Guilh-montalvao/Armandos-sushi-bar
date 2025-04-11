@@ -1,6 +1,12 @@
 import { StyleSheet, Text, View, SafeAreaView, StatusBar } from "react-native";
+import { Poppins_400Regular } from '@expo-google-fonts/poppins';
+import { useFonts } from 'expo-font';
+  
+  export default function Index() {
+  const [fontsLoaded] = useFonts({
+    Poppins_400Regular,
+  });
 
-export default function Index() {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" />
@@ -24,6 +30,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   title: {
+    fontFamily: 'Poppins_400Regular',
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 10,
